@@ -143,7 +143,7 @@ public class Calculator
         
         case 3: return calculateThreeTokens(tokens);
         case 4: throw new CalculatorException("Illegal Token Length");
-        default: throw new CalculatorException("Illegal Token Length");
+        
         	
         }
         
