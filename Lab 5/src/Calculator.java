@@ -131,7 +131,6 @@ public class Calculator
     {
         // Condition on the number of tokens (number of strings in user input separated by spaces)
         switch(tokens.length) {
-        case 0: throw new CalculatorException("Illegal Token Length");
         case 1: if (tokens[0].equalsIgnoreCase("quit")) {
         	return Integer.MIN_VALUE;
         }
@@ -142,8 +141,7 @@ public class Calculator
         case 2: return calculateTwoTokens(tokens);
         
         case 3: return calculateThreeTokens(tokens);
-        case 4: throw new CalculatorException("Illegal Token Length");
-        
+        default: throw new CalculatorException("Illegal Token Length");
         	
         }
         
